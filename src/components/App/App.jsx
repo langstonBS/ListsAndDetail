@@ -11,18 +11,18 @@ import Header from '../Header/Header.jsx';
 
 export default function App() {
   return (
-    <div>
+    <>
       <Router>
         <Header />
         <Switch>
           <Route exact path="/">
             <ApiPage />
           </Route>
-          <Route path="/DetailPage">
+          <Route path="/DetailPage" component={DetailPage}>
             <DetailPage />
           </Route>
         </Switch>
       </Router>
-    </div>
+    </>
   );
 }
