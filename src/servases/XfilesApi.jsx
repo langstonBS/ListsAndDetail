@@ -4,4 +4,11 @@ const getXFilesMain = () => {
     .then(res => res.json());
 };
 
-export { getXFilesMain };
+const getXFilesDetails = (name) => {
+  return fetch(`https://xfiles-api.herokuapp.com/api/v1/characters/${name}`, {
+  })
+    .then(res => res.json());
+
+};
+
+export { getXFilesMain, getXFilesDetails };

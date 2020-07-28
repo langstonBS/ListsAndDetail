@@ -18,9 +18,10 @@ export default function App() {
           <Route exact path="/">
             <ApiPage />
           </Route>
-          <Route path="/DetailPage" component={DetailPage}>
+          <Route path="/:name" >
             <DetailPage />
           </Route>
+
         </Switch>
       </Router>
     </>
