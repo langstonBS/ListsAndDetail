@@ -1,24 +1,16 @@
-import React, { useEffect } from 'react';
-import { useState } from 'react';
-import {
-  useParams
-} from 'react-router-dom';
-import { getXFilesDetails } from '../../servases/XfilesApi';
+import React from 'react';
+
+import { useApiSCall } from '../hooks/hooksDetail.jsx';
 
 
 function DetailPage() {
-  const [character, setCharacter] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const { name } = useParams('');
 
-  useEffect(() => {
-    setLoading(true);
-    getXFilesDetails(name)
-      .then(results => setCharacter(results[0]));
-    setLoading(false);
-  }, []);
+  const {
+    character,
+    loading
+    
+  } = useApiSCall();
   if(loading) return <h1>loading</h1>;
-  console.log(character);
 
   return (
     <>
@@ -30,9 +22,7 @@ function DetailPage() {
       <h3>Portrayed by: {character.portrayedby}</h3>
       <h3>Gender: {character.gender}</h3>
       <p>description: {character.description}</p>
-    </>
-    
-    
+    </>   
 
   );
 }
