@@ -12,6 +12,12 @@ exports[`App component renders App 1`] = `
         <ApiPage />
       </Route>
       <Route
+        exact={true}
+        path="/All"
+      >
+        <ApiPageAll />
+      </Route>
+      <Route
         path="/:name"
       >
         <DetailPage />
