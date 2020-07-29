@@ -1,7 +1,6 @@
 import React from 'react';
 import List from '../List/List';
-import { useApiCall } from '../hooks/hooks.jsx';
-
+import { useApiCallAll } from '../hooks/hooksAll.jsx';
 
 const ApiPage = () => {
 
@@ -9,9 +8,7 @@ const ApiPage = () => {
   const {
     characters,
     loading
-  
-    
-  } = useApiCall();
+  } = useApiCallAll();
   if(loading) return <h1>loading</h1>;
 
 

@@ -8,6 +8,7 @@ export default class Header extends Component {
       <nav>
         <ul>
           <li><NavLink to='/'>Home</NavLink></li>
+          <li><NavLink to='/All'>All</NavLink></li>
         </ul>
       </nav>
     );

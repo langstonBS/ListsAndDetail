@@ -9,14 +9,13 @@ export const useApiSCall = () => {
   const [loading, setLoading] = useState(true);
   const { name } = useParams('');
 
-
   useEffect(() => {
     setLoading(true);
     getXFilesDetails(name)
       .then(results => setCharacters(results[0]))
       .finally(() => setLoading(false));
   }, []);
-  console.log(character);
+
 
   return {
     character,

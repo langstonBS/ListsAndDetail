@@ -3,11 +3,11 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from 'react-router-dom';
 import ApiPage from '../Api/ApiPage.jsx';
 import DetailPage from '../Detail/DetailPage.jsx';
 import Header from '../Header/Header.jsx';
+import ApiPageAll from '../Api/ApiPageAll.jsx';
 
 export default function App() {
   return (
@@ -17,6 +17,9 @@ export default function App() {
         <Switch>
           <Route exact path="/">
             <ApiPage />
+          </Route>
+          <Route exact path="/All">
+            <ApiPageAll />
           </Route>
           <Route path="/:name" >
             <DetailPage />
